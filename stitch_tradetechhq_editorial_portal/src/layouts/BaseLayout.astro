@@ -1,0 +1,251 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  hidePillars?: boolean;
+}
+
+const {
+  title = "TradeTechHQ | B2B Software Journalism & Investigative Reviews",
+  description = "Definitive forensic benchmarks, laboratory testing, and procurement intelligence for enterprise contracting and trade technology.",
+  hidePillars = false,
+} = Astro.props;
+
+const categories = [
+  { name: 'HVAC', href: '/#matrix-section' },
+  { name: 'Plumbing', href: '/#matrix-section' },
+  { name: 'Electrical', href: '/#matrix-section' },
+  { name: 'Locksmith', href: '/#matrix-section' },
+  { name: 'Cleaning', href: '/#matrix-section' },
+  { name: 'Field Service', href: '/#matrix-section' },
+  { name: 'Enterprise Matrix', href: '/#matrix-section' },
+  { name: 'Methodology', href: '#methodology' },
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary/20 selection:text-secondary">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+      <!-- FTC Top Bar -->
+      <div class="bg-primary-container text-on-primary-container">
+        <div class="max-w-max-content-width mx-auto px-gutter-mobile lg:px-gutter-desktop h-8 flex items-center justify-between font-label-caps text-label-caps">
+          <div class="flex items-center gap-space-xs truncate">
+            <span class="inline-block w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            <span class="truncate">TradeTechHQ conducts rigorous independent testing. We may earn commissions through partner links at no cost to you.</span>
+          </div>
+          <a class="hidden sm:inline-flex items-center gap-space-3xs text-on-primary-container hover:text-on-primary font-label-caps text-label-caps underline underline-offset-2 transition-colors" href="#methodology">
+            Read Methodology &amp; FTC Compliance
+          </a>
+        </div>
+      </div>
+
+      <!-- Main Masthead Navigation -->
+      <div class="bg-primary-container text-on-primary">
+        <div class="h-20 max-w-max-content-width mx-auto px-gutter-mobile lg:px-gutter-desktop flex items-center justify-between gap-space-md">
+          <div class="flex items-center gap-space-lg">
+            <a class="flex items-center gap-space-sm group" href="/">
+              <span class="font-headline-lg text-headline-lg tracking-tight text-on-primary">TradeTechHQ</span>
+              <span class="font-label-caps text-label-caps px-space-xs py-space-3xs rounded-lg bg-surface-container-high/20 text-inverse-on-surface">INVESTIGATIVE REVIEWS</span>
+            </a>
+            <nav class="hidden xl:flex items-center gap-space-md font-label-data text-label-data">
+              {categories.map((cat) => (
+                <a class="text-on-primary-container hover:text-on-primary transition-colors" href={cat.href}>
+                  {cat.name}
+                </a>
+              ))}
+            </nav>
+          </div>
+
+          <div class="flex items-center gap-space-sm sm:gap-space-md">
+            <div class="hidden md:flex items-center gap-space-2xs px-space-xs py-space-3xs rounded-lg bg-surface-container-high/15 font-label-data text-label-data text-on-primary-container">
+              <span class="font-label-caps text-label-caps text-on-primary">US</span>
+              <span class="material-symbols-outlined text-[16px]">expand_more</span>
+            </div>
+            <button aria-label="Search Reviews" class="p-space-2xs text-on-primary-container hover:text-on-primary transition-colors" type="button" onclick="alert('Search: Enter vendor or technology category')">
+              <span class="material-symbols-outlined">search</span>
+            </button>
+            <a class="hidden sm:inline-flex items-center justify-center rounded-lg px-space-md py-space-xs bg-secondary hover:bg-secondary-container text-on-secondary font-label-data text-label-data transition-colors shadow-sm" href="#newsletter">
+              Newsletter / Briefing
+            </a>
+            <img alt="Auditor Profile" class="w-8 h-8 rounded-full object-cover border border-white/20" src="https://lh3.googleusercontent.com/aida/AEtjO1WJaa1x9F41tzSsn37XwclcVsEfwruTB0wpBc7QrJ1iy7j2HaBR90k1VrHsWtb8gLjKTbbBBxnEHKC8xYRNfiRBJKFwyYuPT9_aTETDdMmU4KWkJv-GNen_402wmG84LcGN9qAopIQwzW8iRdA4z6xt_ITMwABd6058k-SvHRP02CRmD0UDvinRAA2rmj6HIJdQpUj8zbg5Toc6090WZ2zd73PrbqwVnOlMfQ4jAfxoAyBQycExeJbvCmlX5oqh_7hXy1d51hy16g" />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="w-full pt-28 bg-surface">
+      <slot />
+
+      {!hidePillars && (
+        <!-- Editorial Integrity & Regulatory Methodology Section: Five Core Pillars of Editorial Integrity -->
+        <section class="w-full max-w-max-content-width mx-auto px-gutter-mobile lg:px-gutter-desktop py-space-3xl" id="methodology">
+          <div class="bg-primary text-on-primary rounded-xl p-space-xl lg:p-space-2xl shadow-xl flex flex-col gap-space-xl relative overflow-hidden">
+            <!-- Ambient Glow Decorator -->
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-secondary/20 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+              <div class="max-w-xl flex flex-col gap-space-xs">
+                <div class="inline-flex items-center gap-space-2xs text-secondary-fixed font-label-caps text-label-caps uppercase tracking-widest">
+                  <span class="material-symbols-outlined text-[16px]">verified</span>
+                  <span>Institutional Charter</span>
+                </div>
+                <h2 class="font-headline-lg text-headline-lg text-on-primary">Our Five Core Pillars of Editorial Integrity</h2>
+                <p class="font-body-md text-body-md text-on-primary-container">
+                  TradeTechHQ was founded to eliminate pay-to-play review spam and sponsored rankings in the commercial trade tech sector. Here is our binding operational standard.
+                </p>
+              </div>
+              <a class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded bg-surface text-on-surface hover:bg-surface-container font-label-data text-label-data font-medium transition-colors whitespace-nowrap shadow-sm" href="#methodology">
+                <span>Read Institutional Charter</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </a>
+            </div>
+
+            <!-- 5 Integrity Columns -->
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-space-md pt-space-sm text-left">
+              <div class="flex flex-col gap-space-2xs p-space-md rounded-lg bg-surface-container-lowest/5 border border-white/5">
+                <span class="font-label-caps text-label-caps text-secondary-fixed">01</span>
+                <span class="font-headline-sm text-headline-sm text-on-primary">Autonomous Software Procurement</span>
+                <p class="font-caption text-caption text-on-primary-container">
+                  We purchase commercial enterprise subscriptions anonymously using our own lab research budget. No free vendor accounts.
+                </p>
+              </div>
+
+              <div class="flex flex-col gap-space-2xs p-space-md rounded-lg bg-surface-container-lowest/5 border border-white/5">
+                <span class="font-label-caps text-label-caps text-secondary-fixed">02</span>
+                <span class="font-headline-sm text-headline-sm text-on-primary">Zero Sponsored Rankings</span>
+                <p class="font-caption text-caption text-on-primary-container">
+                  Vendors cannot buy placement, alter scores, preview lab verdicts prior to publication, or influence benchmark methodologies.
+                </p>
+              </div>
+
+              <div class="flex flex-col gap-space-2xs p-space-md rounded-lg bg-surface-container-lowest/5 border border-white/5">
+                <span class="font-label-caps text-label-caps text-secondary-fixed">03</span>
+                <span class="font-headline-sm text-headline-sm text-on-primary">Full FTC Disclosure</span>
+                <p class="font-caption text-caption text-on-primary-container">
+                  If an outbound partner link yields an affiliate referral commission, it is explicitly disclosed. Editorial scores remain strictly decoupled.
+                </p>
+              </div>
+
+              <div class="flex flex-col gap-space-2xs p-space-md rounded-lg bg-surface-container-lowest/5 border border-white/5">
+                <span class="font-label-caps text-label-caps text-secondary-fixed">04</span>
+                <span class="font-headline-sm text-headline-sm text-on-primary">Contractor Peer Review</span>
+                <p class="font-caption text-caption text-on-primary-container">
+                  Every software teardown is cross-validated by our rotating board of 24 verified master plumbers, HVAC owners, and electrical contractors.
+                </p>
+              </div>
+
+              <div class="flex flex-col gap-space-2xs p-space-md rounded-lg bg-surface-container-lowest/5 border border-white/5">
+                <span class="font-label-caps text-label-caps text-secondary-fixed">05</span>
+                <span class="font-headline-sm text-headline-sm text-on-primary">Open Testing Telemetry</span>
+                <p class="font-caption text-caption text-on-primary-container">
+                  We openly publish API test scripts, sync latency logs, and offline benchmark data so contractors can replicate our lab findings.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      <!-- Analyst Briefing & Newsletter Capture Module -->
+      <section class="w-full max-w-max-content-width mx-auto px-gutter-mobile lg:px-gutter-desktop pb-space-4xl" id="newsletter">
+        <div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-xl border border-outline-variant/30">
+          <div class="flex flex-col gap-space-2xs max-w-lg">
+            <span class="font-label-caps text-label-caps text-secondary uppercase font-semibold">Weekly Executive Dispatch</span>
+            <h3 class="font-headline-md text-headline-md text-on-surface">The Field Contractor Software Briefing</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+              Join 18,400+ trade owners, dispatch heads, and operational directors receiving our weekly teardowns of trade SaaS pricing hikes, hidden fees, and emerging AI tools.
+            </p>
+          </div>
+          <form class="w-full md:w-auto flex-1 max-w-md flex flex-col sm:flex-row gap-space-xs" onsubmit="event.preventDefault(); alert('Subscribed to TradeTechHQ Analyst Briefing.');">
+            <input class="w-full px-space-md py-space-xs rounded bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary border border-outline-variant/40" placeholder="Enter corporate email address..." required type="email" />
+            <button class="px-space-lg py-space-xs rounded bg-primary text-on-primary hover:bg-inverse-surface transition-colors font-label-data text-label-data whitespace-nowrap shadow-sm" type="submit">
+              Subscribe Free
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-surface-container-low text-on-surface border-t border-outline-variant/30">
+      <div class="max-w-max-content-width mx-auto px-gutter-mobile lg:px-gutter-desktop py-space-3xl">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl pb-space-2xl">
+          <div class="lg:col-span-2 flex flex-col gap-space-sm">
+            <div class="flex items-center gap-space-sm">
+              <span class="font-headline-md text-headline-md text-on-surface">TradeTechHQ</span>
+              <span class="font-label-caps text-label-caps px-space-xs py-space-3xs rounded-lg bg-surface-container-high text-on-surface-variant">EST. 2024</span>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant max-w-max-reading-width">
+              The definitive B2B software journalism, benchmarking, and forensic procurement intelligence platform for commercial and residential trade enterprises.
+            </p>
+            <div class="flex flex-col gap-space-2xs pt-space-xs">
+              <span class="font-label-caps text-label-caps text-on-surface-variant font-semibold">EDITORIAL INDEPENDENCE</span>
+              <p class="font-caption text-caption text-on-surface-variant">
+                Our technical reviews, benchmark matrices, and operational stress-tests remain 100% independent. Research methodologies adhere to strict institutional guidelines and forensic reproducibility standards.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-space-xs">
+            <span class="font-label-caps text-label-caps text-on-surface font-semibold">Category Directory</span>
+            <nav class="flex flex-col gap-space-2xs font-body-sm text-body-sm">
+              <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="/#matrix-section">HVAC Software</a>
+              <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="/#matrix-section">Plumbing Dispatch</a>
+              <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="/#matrix-section">Electrical Estimating</a>
+              <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="/#matrix-section">Locksmith Management</a>
+              <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="/#matrix-section">Field Management</a>
+              <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="/#matrix-section">Dispatch &amp; Routing</a>
+            </nav>
+          </div>
+
+          <div class="flex flex-col gap-space-xs">
+            <span class="font-label-caps text-label-caps text-on-surface font-semibold">Standards &amp; Ethics</span>
+            <nav class="flex flex-col gap-space-2xs font-body-sm text-body-sm">
+              <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#methodology">Testing Methodology</a>
+              <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#methodology">Editorial Charter</a>
+              <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#methodology">Review Guidelines</a>
+              <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#methodology">FTC Compliance</a>
+              <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#newsletter">Analyst Briefing</a>
+            </nav>
+          </div>
+
+          <div class="flex flex-col gap-space-xs">
+            <span class="font-label-caps text-label-caps text-on-surface font-semibold">Global Editions</span>
+            <nav class="flex flex-col gap-space-2xs font-body-sm text-body-sm">
+              <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="/">United States (EN-US)</a>
+              <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="/">United Kingdom (EN-GB)</a>
+              <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="/">Canada (EN-CA)</a>
+              <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="/">Australia (EN-AU)</a>
+            </nav>
+          </div>
+        </div>
+
+        <div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm font-caption text-caption text-on-surface-variant border-t border-outline-variant/30">
+          <div>© 2026 TradeTechHQ Media Group Inc. All rights reserved. TradeTechHQ is a registered mark of B2B Trade Technologies.</div>
+          <div class="flex items-center gap-space-md">
+            <a class="hover:text-on-surface transition-colors" href="#methodology">Privacy Policy</a>
+            <a class="hover:text-on-surface transition-colors" href="#methodology">Terms of Service</a>
+            <a class="hover:text-on-surface transition-colors" href="/#matrix-section">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
