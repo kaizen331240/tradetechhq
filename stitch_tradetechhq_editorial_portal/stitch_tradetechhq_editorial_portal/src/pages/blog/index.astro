@@ -1,0 +1,385 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog');
+const sortedPosts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+// Featured lead review
+const featuredPost = sortedPosts.find(p => p.data.featured) || sortedPosts[0];
+
+// Distinct categories
+const categories = ['All Verticals', ...new Set(sortedPosts.map(p => p.data.category))];
+---
+
+<BaseLayout 
+  title="B2B Software Audits & Field Reviews | TradeTechHQ Archive"
+  description="Explore the complete TradeTechHQ investigative database of independent field service software benchmarks, API latency audits, and contractor ERP evaluations."
+>
+  <div class="flex flex-col w-full">
+    <!-- Top Global Status & Breadcrumbs -->
+    <section class="w-full bg-surface-container-low/70 py-space-sm border-b border-outline-variant/30">
+      <div class="max-w-max-content-width mx-auto px-gutter-mobile lg:px-gutter-desktop flex flex-wrap items-center justify-between gap-y-space-xs text-on-surface-variant">
+        <nav aria-label="Breadcrumb" class="flex items-center gap-space-2xs font-label-data text-label-data">
+          <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="/">Home</a>
+          <span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+          <span class="text-on-surface font-semibold">Audits &amp; Reviews</span>
+        </nav>
+
+        <div class="flex flex-wrap items-center gap-space-xs font-label-caps text-label-caps">
+          <span class="inline-flex items-center gap-space-2xs px-space-xs py-space-3xs rounded-full bg-surface-container-lowest shadow-sm text-on-surface border border-outline-variant/30">
+            <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+            Database Active: {sortedPosts.length} Audited Platforms
+          </span>
+          <span class="hidden md:inline-flex items-center gap-space-2xs px-space-xs py-space-3xs rounded-full bg-surface-container-high/60 text-on-surface-variant">
+            <span class="material-symbols-outlined text-[13px] text-secondary">verified</span>
+            Zero Sponsored Listings
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Archive Hero Section -->
+    <section class="w-full max-w-max-content-width mx-auto px-gutter-mobile lg:px-gutter-desktop pt-space-xl pb-space-2xl">
+      <div class="flex flex-col gap-space-md max-w-3xl">
+        <div class="inline-flex items-center gap-space-xs">
+          <span class="font-label-caps text-label-caps px-space-xs py-space-3xs rounded bg-primary text-on-primary font-semibold tracking-widest uppercase">
+            Contractor Intelligence Database
+          </span>
+          <span class="font-label-caps text-label-caps text-outline tracking-wider uppercase">
+            Independent B2B SaaS Telemetry
+          </span>
+        </div>
+
+        <h1 class="font-headline-xl text-headline-xl lg:text-display-hero text-on-surface tracking-tight font-normal leading-tight">
+          Field Service Software Audits &amp; Investigations
+        </h1>
+
+        <p class="font-body-lead text-body-lead text-on-surface-variant leading-relaxed">
+          Uncompromising laboratory teardowns, API stress-tests, and real technician adoption curves across commercial and residential trade software. Every review is funded through our autonomous research budget with zero vendor sponsorship.
+        </p>
+
+        <!-- Stats Bar -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-space-md pt-space-sm border-t border-outline-variant/30 font-label-data text-label-data">
+          <div class="flex flex-col">
+            <span class="font-headline-md text-headline-md font-semibold text-on-surface">{sortedPosts.length}</span>
+            <span class="font-caption text-caption text-on-surface-variant">Full Forensic Audits</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-headline-md text-headline-md font-semibold text-on-surface">320+ hrs</span>
+            <span class="font-caption text-caption text-on-surface-variant">Lab Testing Telemetry</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-headline-md text-headline-md font-semibold text-on-surface">48</span>
+            <span class="font-caption text-caption text-on-surface-variant">Fleet Testbeds Synced</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-headline-md text-headline-md font-semibold text-secondary">100%</span>
+            <span class="font-caption text-caption text-on-surface-variant">Conflict-Free Standard</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Filter & Search Toolbar -->
+    <section class="w-full bg-surface-container-lowest border-y border-outline-variant/30 sticky top-28 z-40 shadow-[0_1px_6px_rgba(0,0,0,0.03)]">
+      <div class="max-w-max-content-width mx-auto px-gutter-mobile lg:px-gutter-desktop py-space-sm flex flex-col md:flex-row items-center justify-between gap-space-md">
+        <!-- Vertical Filter Chips -->
+        <div class="flex items-center gap-space-2xs overflow-x-auto w-full md:w-auto pb-space-3xs md:pb-0 scrollbar-none" id="filterChips">
+          {categories.map((cat, idx) => (
+            <button 
+              class={`px-space-sm py-space-2xs rounded font-label-data text-label-data whitespace-nowrap transition-colors ${idx === 0 ? 'bg-primary text-on-primary font-semibold active-filter' : 'bg-surface-container-low text-on-surface-variant hover:text-on-surface border border-outline-variant/30'}`}
+              data-category={cat}
+              type="button"
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
+        <!-- Search Input -->
+        <div class="w-full md:w-72 relative">
+          <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-outline pointer-events-none">search</span>
+          <input 
+            type="search" 
+            id="searchInput"
+            placeholder="Filter reviews or software..." 
+            class="w-full pl-9 pr-space-md py-space-2xs rounded bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary border border-outline-variant/40"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content: Featured Review + All Articles Grid -->
+    <section class="w-full max-w-max-content-width mx-auto px-gutter-mobile lg:px-gutter-desktop py-space-2xl">
+      <!-- Lead Featured Review Spotlight -->
+      <div class="mb-space-3xl" id="featuredSection">
+        <span class="font-label-caps text-label-caps text-secondary uppercase tracking-wider font-semibold block mb-space-xs">
+          FLAGSHIP LABORATORY BENCHMARK
+        </span>
+        <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm border border-outline-variant/30 grid grid-cols-1 lg:grid-cols-12 gap-0 group hover:shadow-md transition-shadow">
+          <a href={`/blog/${featuredPost.slug}`} class="lg:col-span-5 relative block min-h-[260px] lg:min-h-[380px] bg-cover bg-center overflow-hidden" style={featuredPost.data.featuredImage ? `background-image: url('${featuredPost.data.featuredImage}')` : 'background-color: #131a33;'}>
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent lg:hidden"></div>
+            <span class="absolute top-4 left-4 font-label-caps text-label-caps px-space-xs py-space-3xs rounded bg-primary-container text-on-primary font-semibold">
+              SCORE: {featuredPost.data.score.toFixed(1)} / 10
+            </span>
+          </a>
+
+          <div class="lg:col-span-7 p-space-xl flex flex-col justify-between gap-space-md">
+            <div class="flex flex-col gap-space-xs">
+              <div class="flex items-center justify-between">
+                <span class="font-label-caps text-label-caps text-secondary font-semibold uppercase">{featuredPost.data.category}</span>
+                <span class="font-label-caps text-label-caps px-space-xs py-space-3xs rounded bg-surface-container-low text-on-surface-variant border border-outline-variant/30">
+                  {featuredPost.data.badge || 'VERIFIED AUDIT'}
+                </span>
+              </div>
+
+              <h2 class="font-headline-lg text-headline-lg text-on-surface group-hover:text-secondary transition-colors leading-tight">
+                <a href={`/blog/${featuredPost.slug}`}>
+                  {featuredPost.data.title}
+                </a>
+              </h2>
+
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                {featuredPost.data.summary}
+              </p>
+
+              <!-- Pros Preview -->
+              {featuredPost.data.pros && featuredPost.data.pros.length > 0 && (
+                <div class="pt-space-xs flex flex-col gap-space-3xs">
+                  {featuredPost.data.pros.slice(0, 2).map((pro) => (
+                    <div class="flex items-start gap-space-2xs font-body-sm text-body-sm text-on-surface">
+                      <span class="text-secondary font-bold leading-none mt-0.5">+</span>
+                      <span>{pro}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <div class="pt-space-md border-t border-outline-variant/20 flex flex-wrap items-center justify-between gap-space-sm font-label-data text-label-data">
+              <div class="flex items-center gap-space-xs text-on-surface-variant">
+                <span>By <strong>{featuredPost.data.author}</strong></span>
+                <span>•</span>
+                <span>{featuredPost.data.readTime}</span>
+              </div>
+
+              <div class="flex items-center gap-space-sm">
+                <a href={`/blog/${featuredPost.slug}`} class="inline-flex items-center gap-space-2xs px-space-md py-space-2xs rounded bg-primary text-on-primary hover:bg-inverse-surface transition-colors">
+                  <span>Read Full Audit</span>
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section Title & Grid Counter -->
+      <div class="flex items-center justify-between pb-space-lg border-b border-outline-variant/30 mb-space-xl">
+        <div class="flex items-baseline gap-space-sm">
+          <h2 class="font-headline-md text-headline-md text-on-surface">All Lab Reviews &amp; Forensic Audits</h2>
+          <span class="font-label-caps text-label-caps text-outline" id="articlesCount">Showing {sortedPosts.length} audits</span>
+        </div>
+        <a class="hidden sm:inline-flex items-center gap-space-3xs font-label-data text-label-data text-secondary hover:underline" href="/#matrix-section">
+          <span>Compare All in Matrix</span>
+          <span class="material-symbols-outlined text-[16px]">table_chart</span>
+        </a>
+      </div>
+
+      <!-- Articles Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg" id="postsGrid">
+        {sortedPosts.map((post) => (
+          <article 
+            class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm border border-outline-variant/30 flex flex-col group hover:shadow-md transition-shadow post-card"
+            data-category={post.data.category}
+            data-title={post.data.title.toLowerCase()}
+            data-summary={post.data.summary.toLowerCase()}
+            data-author={post.data.author.toLowerCase()}
+          >
+            <a href={`/blog/${post.slug}`} class="block h-48 w-full bg-cover bg-center overflow-hidden relative" style={post.data.featuredImage ? `background-image: url('${post.data.featuredImage}')` : 'background-color: #ebedfb;'}>
+              <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors"></div>
+              {post.data.badge && (
+                <span class="absolute top-3 right-3 font-label-caps text-[10px] px-space-xs py-space-3xs rounded bg-primary text-on-primary font-semibold shadow-sm">
+                  {post.data.badge}
+                </span>
+              )}
+            </a>
+
+            <div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
+              <div class="flex flex-col gap-space-xs">
+                <div class="flex items-center justify-between">
+                  <span class="font-label-caps text-label-caps text-secondary font-semibold uppercase">{post.data.category}</span>
+                  <div class="flex items-center gap-space-3xs text-label-data font-semibold text-on-surface">
+                    <span class="text-amber-500">★</span>
+                    <span>{post.data.score.toFixed(1)}</span>
+                  </div>
+                </div>
+
+                <h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-secondary transition-colors leading-snug">
+                  <a href={`/blog/${post.slug}`}>
+                    {post.data.title}
+                  </a>
+                </h3>
+
+                <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                  {post.data.summary}
+                </p>
+              </div>
+
+              <div class="flex items-center justify-between pt-space-xs font-label-data text-label-data text-outline border-t border-outline-variant/20">
+                <div class="flex items-center gap-space-3xs">
+                  <span>{post.data.author}</span>
+                  <span>•</span>
+                  <span>{post.data.readTime}</span>
+                </div>
+                <a href={`/blog/${post.slug}`} class="text-secondary font-medium group-hover:translate-x-0.5 transition-transform flex items-center gap-space-3xs">
+                  <span>Read Audit</span>
+                  <span>→</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <!-- No Results State -->
+      <div id="noResults" class="hidden py-space-3xl text-center flex-col items-center gap-space-sm">
+        <span class="material-symbols-outlined text-[48px] text-outline">search_off</span>
+        <h3 class="font-headline-md text-headline-md text-on-surface">No Audits Found</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          No audits match your active search and category filters. Try clearing the filter or searching for another term.
+        </p>
+        <button id="resetFiltersBtn" class="mt-space-xs px-space-md py-space-xs rounded bg-primary text-on-primary font-label-data text-label-data" type="button">
+          Reset Filters
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <!-- Interactive Client-side Filtering Script -->
+  <script is:inline>
+    (function initBlogFiltering() {
+      const filterChips = document.querySelectorAll('#filterChips button');
+      const searchInput = document.getElementById('searchInput');
+      const postCards = document.querySelectorAll('.post-card');
+      const countDisplay = document.getElementById('articlesCount');
+      const noResults = document.getElementById('noResults');
+      const resetBtn = document.getElementById('resetFiltersBtn');
+      const featuredSection = document.getElementById('featuredSection');
+
+      let activeCategory = 'All Verticals';
+      let searchQuery = '';
+
+      // Check URL parameters (e.g. ?vertical=HVAC)
+      const urlParams = new URLSearchParams(window.location.search);
+      const initialVertical = urlParams.get('vertical');
+      if (initialVertical) {
+        activeCategory = initialVertical;
+        filterChips.forEach(btn => {
+          if (btn.getAttribute('data-category').toLowerCase() === initialVertical.toLowerCase()) {
+            btn.classList.add('bg-primary', 'text-on-primary', 'font-semibold', 'active-filter');
+            btn.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+          } else {
+            btn.classList.remove('bg-primary', 'text-on-primary', 'font-semibold', 'active-filter');
+            btn.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+          }
+        });
+      }
+
+      function updateGrid() {
+        let visibleCount = 0;
+        const normalizedQuery = searchQuery.trim().toLowerCase();
+
+        postCards.forEach(card => {
+          const cardCat = card.getAttribute('data-category');
+          const title = card.getAttribute('data-title');
+          const summary = card.getAttribute('data-summary');
+          const author = card.getAttribute('data-author');
+
+          const matchesCat = activeCategory === 'All Verticals' || 
+            cardCat.toLowerCase().includes(activeCategory.toLowerCase());
+          
+          const matchesSearch = !normalizedQuery || 
+            title.includes(normalizedQuery) || 
+            summary.includes(normalizedQuery) || 
+            author.includes(normalizedQuery) || 
+            cardCat.toLowerCase().includes(normalizedQuery);
+
+          if (matchesCat && matchesSearch) {
+            card.classList.remove('hidden');
+            visibleCount++;
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+
+        if (countDisplay) {
+          countDisplay.textContent = `Showing ${visibleCount} audits`;
+        }
+
+        if (noResults) {
+          if (visibleCount === 0) {
+            noResults.classList.remove('hidden');
+            noResults.classList.add('flex');
+          } else {
+            noResults.classList.add('hidden');
+            noResults.classList.remove('flex');
+          }
+        }
+
+        // Hide featured section if filtering or searching
+        if (featuredSection) {
+          if (activeCategory !== 'All Verticals' || normalizedQuery.length > 0) {
+            featuredSection.classList.add('hidden');
+          } else {
+            featuredSection.classList.remove('hidden');
+          }
+        }
+      }
+
+      filterChips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          filterChips.forEach(c => {
+            c.classList.remove('bg-primary', 'text-on-primary', 'font-semibold', 'active-filter');
+            c.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+          });
+
+          chip.classList.add('bg-primary', 'text-on-primary', 'font-semibold', 'active-filter');
+          chip.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+
+          activeCategory = chip.getAttribute('data-category');
+          updateGrid();
+        });
+      });
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          searchQuery = e.target.value;
+          updateGrid();
+        });
+      }
+
+      if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+          activeCategory = 'All Verticals';
+          searchQuery = '';
+          if (searchInput) searchInput.value = '';
+          filterChips.forEach((c, idx) => {
+            if (idx === 0) {
+              c.classList.add('bg-primary', 'text-on-primary', 'font-semibold', 'active-filter');
+              c.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+            } else {
+              c.classList.remove('bg-primary', 'text-on-primary', 'font-semibold', 'active-filter');
+              c.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+            }
+          });
+          updateGrid();
+        });
+      }
+
+      // Initial execution
+      updateGrid();
+    })();
+  </script>
+</BaseLayout>
