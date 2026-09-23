@@ -6,7 +6,7 @@ authorRole: "Lead Systems Architect, TradeTechHQ Labs • Former VP Infrastructu
 score: 9.6
 category: "HVAC & Field Service"
 summary: "Our engineering lab spent 140+ hours stress-testing dispatch routing algorithms, bidirectional ERP sync latency, and technician field adoption curves across an orchestrated 45-truck simulated enterprise fleet."
-vendorUrl: "https://www.servicetitan.com"
+vendorUrl: "[https://www.servicetitan.com](https://join.servicetitan.com/mzXZ3Hk)"
 badge: "OVERALL CATEGORY WINNER"
 platformCode: "ST"
 auditsCount: 340
