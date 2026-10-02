@@ -6,7 +6,7 @@ authorRole: "Lead Systems Architect, TradeTechHQ"
 score: 9.1
 category: "HVAC & Plumbing"
 summary: "Testing in-app consumer financing, modern native mobile iOS/Android dispatching, and automated post-job review collection."
-vendorUrl: "[https://www.housecallpro.com](https://housecallpro.partnerlinks.io/5qeb39utp5xi)"
+vendorUrl: "https://housecallpro.partnerlinks.io/5qeb39utp5xi"
 badge: "BEST FOR FAST QUOTING"
 platformCode: "HP"
 auditsCount: 428
