@@ -5,7 +5,7 @@ pubDate: 2026-09-24
 author: "TradeTechHQ Editorial Team"
 category: "Comparisons"
 heroImage: "/images/servicetitan-vs-housecall-pro.jpg"
-vendorUrl: "https://servicetitan.pxf.io/c/tradetechhq"
+vendorUrl: "https://join.servicetitan.com/mzXZ3Hk"
 secondaryVendorUrl: "https://housecallpro.partnerlinks.io/5qeb39utp5xi"
 badgeText: "Head-to-Head Showdown"
 score: 9.6
