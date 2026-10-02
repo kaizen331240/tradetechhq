@@ -8,6 +8,8 @@ heroImage: "/images/servicetitan-vs-housecall-pro.jpg"
 vendorUrl: "https://servicetitan.pxf.io/c/tradetechhq"
 secondaryVendorUrl: "https://housecallpro.partnerlinks.io/5qeb39utp5xi"
 badgeText: "Head-to-Head Showdown"
+score: 9.6
+summary: "ServiceTitan leads for enterprise and multi-truck scaling, while Housecall Pro dominates for mid-market efficiency, fast deployment, and residential service operations."
 ---
 
 Choosing the right Field Service Management (FSM) software is one of the most critical operational decisions for trade contractors in 2026. 
