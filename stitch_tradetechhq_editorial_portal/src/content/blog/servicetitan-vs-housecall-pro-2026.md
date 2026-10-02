@@ -55,22 +55,89 @@ This comparison is built on verified contractor reports from Reddit's r/HVAC, r/
 
 ## Quick Comparison: ServiceTitan vs. Housecall Pro (2026)
 
-| Category | ServiceTitan | Housecall Pro |
-|---|---|---|
-| **Base price** | ~$245–$500/tech/month (quote only) | $59–$299/month (published) |
-| **Implementation fee** | $5,000–$50,000+ (one-time) | Minimal to none |
-| **Ideal team size** | 10+ technicians | 1–15 technicians |
-| **Contract required** | Yes, annual minimum | No (monthly available) |
-| **Time to go live** | 6–16 weeks | 1–2 weeks |
-| **Mobile app rating** | 4.3 (App Store) | 4.6 (22K+ reviews) |
-| **Inventory management** | Advanced, with parts tracking | Basic, limited depth |
-| **Flat-rate pricebook** | Advanced (Pricebook Pro add-on) | Built-in, simpler |
-| **QuickBooks integration** | Yes | Yes (Essentials+) |
-| **Marketing automation** | Advanced (Marketing Pro add-on) | Built-in at mid tiers |
-| **Customer portal** | Full portal, all customers | Membership customers only |
-| **Dispatch complexity** | Enterprise-grade, multi-board | Straightforward, visual |
-| **Transparent pricing** | No — sales call required | Yes — pricing page live |
-| **Best for** | Multi-truck shops $2M–$20M+ | Residential trades $150K–$3M |
+<div style="overflow-x: auto; margin: 28px 0; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); background-color: #ffffff;">
+  <table style="width: 100%; border-collapse: collapse; text-align: left; font-family: inherit; font-size: 15px; color: #1e293b;">
+    <thead>
+      <tr style="background-color: #0f172a; color: #ffffff;">
+        <th style="padding: 16px 20px; font-weight: 700; text-transform: uppercase; font-size: 12px; letter-spacing: 0.05em; border-bottom: 2px solid #334155;">Category</th>
+        <th style="padding: 16px 20px; font-weight: 700; text-transform: uppercase; font-size: 12px; letter-spacing: 0.05em; border-bottom: 2px solid #334155; color: #60a5fa;">ServiceTitan</th>
+        <th style="padding: 16px 20px; font-weight: 700; text-transform: uppercase; font-size: 12px; letter-spacing: 0.05em; border-bottom: 2px solid #334155; color: #34d399;">Housecall Pro</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #f1f5f9; background-color: #f8fafc;">
+        <td style="padding: 14px 20px; font-weight: 600; color: #0f172a;">Base price</td>
+        <td style="padding: 14px 20px; color: #334155;">~$245–$500/tech/mo <span style="font-size: 12px; color: #64748b; font-style: italic;">(Quote only)</span></td>
+        <td style="padding: 14px 20px; color: #334155; font-weight: 600;">$59–$299/mo <span style="font-size: 12px; color: #64748b; font-style: italic;">(Published)</span></td>
+      </tr>
+      <tr style="border-bottom: 1px solid #f1f5f9;">
+        <td style="padding: 14px 20px; font-weight: 600; color: #0f172a;">Implementation fee</td>
+        <td style="padding: 14px 20px; color: #dc2626; font-weight: 500;">$5,000–$50,000+ <span style="font-size: 12px; color: #64748b;">(One-time)</span></td>
+        <td style="padding: 14px 20px; color: #16a34a; font-weight: 600;">Minimal to none</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #f1f5f9; background-color: #f8fafc;">
+        <td style="padding: 14px 20px; font-weight: 600; color: #0f172a;">Ideal team size</td>
+        <td style="padding: 14px 20px; color: #334155; font-weight: 600;">10+ technicians</td>
+        <td style="padding: 14px 20px; color: #334155;">1–15 technicians</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #f1f5f9;">
+        <td style="padding: 14px 20px; font-weight: 600; color: #0f172a;">Contract required</td>
+        <td style="padding: 14px 20px; color: #334155;">Yes, annual minimum</td>
+        <td style="padding: 14px 20px; color: #16a34a; font-weight: 600;">No <span style="font-size: 12px; color: #64748b;">(Monthly available)</span></td>
+      </tr>
+      <tr style="border-bottom: 1px solid #f1f5f9; background-color: #f8fafc;">
+        <td style="padding: 14px 20px; font-weight: 600; color: #0f172a;">Time to go live</td>
+        <td style="padding: 14px 20px; color: #334155;">6–16 weeks</td>
+        <td style="padding: 14px 20px; color: #16a34a; font-weight: 600;">1–2 weeks</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #f1f5f9;">
+        <td style="padding: 14px 20px; font-weight: 600; color: #0f172a;">Mobile app rating</td>
+        <td style="padding: 14px 20px; color: #334155;">4.3 ★ <span style="font-size: 12px; color: #64748b;">(App Store)</span></td>
+        <td style="padding: 14px 20px; color: #334155; font-weight: 600;">4.6 ★ <span style="font-size: 12px; color: #64748b;">(22K+ reviews)</span></td>
+      </tr>
+      <tr style="border-bottom: 1px solid #f1f5f9; background-color: #f8fafc;">
+        <td style="padding: 14px 20px; font-weight: 600; color: #0f172a;">Inventory management</td>
+        <td style="padding: 14px 20px; color: #16a34a; font-weight: 600;">Advanced <span style="font-size: 12px; color: #64748b;">(Parts tracking)</span></td>
+        <td style="padding: 14px 20px; color: #334155;">Basic, limited depth</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #f1f5f9;">
+        <td style="padding: 14px 20px; font-weight: 600; color: #0f172a;">Flat-rate pricebook</td>
+        <td style="padding: 14px 20px; color: #16a34a; font-weight: 600;">Advanced <span style="font-size: 12px; color: #64748b;">(Pricebook Pro)</span></td>
+        <td style="padding: 14px 20px; color: #334155;">Built-in, simpler</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #f1f5f9; background-color: #f8fafc;">
+        <td style="padding: 14px 20px; font-weight: 600; color: #0f172a;">QuickBooks integration</td>
+        <td style="padding: 14px 20px; color: #16a34a; font-weight: 600;">Yes</td>
+        <td style="padding: 14px 20px; color: #16a34a; font-weight: 600;">Yes <span style="font-size: 12px; color: #64748b;">(Essentials+)</span></td>
+      </tr>
+      <tr style="border-bottom: 1px solid #f1f5f9;">
+        <td style="padding: 14px 20px; font-weight: 600; color: #0f172a;">Marketing automation</td>
+        <td style="padding: 14px 20px; color: #16a34a; font-weight: 600;">Advanced <span style="font-size: 12px; color: #64748b;">(Marketing Pro)</span></td>
+        <td style="padding: 14px 20px; color: #334155;">Built-in at mid tiers</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #f1f5f9; background-color: #f8fafc;">
+        <td style="padding: 14px 20px; font-weight: 600; color: #0f172a;">Customer portal</td>
+        <td style="padding: 14px 20px; color: #16a34a; font-weight: 600;">Full portal <span style="font-size: 12px; color: #64748b;">(All customers)</span></td>
+        <td style="padding: 14px 20px; color: #334155;">Membership customers only</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #f1f5f9;">
+        <td style="padding: 14px 20px; font-weight: 600; color: #0f172a;">Dispatch complexity</td>
+        <td style="padding: 14px 20px; color: #334155;">Enterprise-grade, multi-board</td>
+        <td style="padding: 14px 20px; color: #334155;">Straightforward, visual</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #f1f5f9; background-color: #f8fafc;">
+        <td style="padding: 14px 20px; font-weight: 600; color: #0f172a;">Transparent pricing</td>
+        <td style="padding: 14px 20px; color: #dc2626;">No <span style="font-size: 12px; color: #64748b;">(Sales call required)</span></td>
+        <td style="padding: 14px 20px; color: #16a34a; font-weight: 600;">Yes <span style="font-size: 12px; color: #64748b;">(Pricing page live)</span></td>
+      </tr>
+      <tr style="background-color: #eff6ff;">
+        <td style="padding: 16px 20px; font-weight: 700; color: #1e3a8a;">Best for</td>
+        <td style="padding: 16px 20px; font-weight: 700; color: #1d4ed8;">Multi-truck shops $2M–$20M+</td>
+        <td style="padding: 16px 20px; font-weight: 700; color: #047857;">Residential trades $150K–$3M</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ---
 
