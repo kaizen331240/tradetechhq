@@ -4,7 +4,7 @@ description: "A no-fluff comparison of Housecall Pro and Jobber for HVAC contrac
 pubDate: 2026-10-06
 author: "TradeTechHQ Editorial Team"
 category: "Comparisons"
-heroImage: "/images/housecall-pro-vs-jobber-hvac.jpg"
+heroImage: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=80"
 vendorUrl: "https://housecallpro.partnerlinks.io/5qeb39utp5xi"
 secondaryVendorUrl: "https://getjobber.com/affiliates"
 badgeText: "HVAC Head-to-Head"
