@@ -5,7 +5,7 @@ pubDate: 2026-10-02
 author: "TradeTechHQ Editorial Team"
 authorRole: "Systems Research Architect, TradeTechHQ Labs"
 category: "Comparisons"
-heroImage: "/images/servicetitan-vs-housecall-pro.jpg"
+heroImage: "https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1200&q=80"
 vendorUrl: "https://join.servicetitan.com/mzXZ3Hk"
 secondaryVendorUrl: "https://housecallpro.partnerlinks.io/5qeb39utp5xi"
 badgeText: "Head-to-Head Showdown"
