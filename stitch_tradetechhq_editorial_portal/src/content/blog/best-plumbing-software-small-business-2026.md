@@ -128,7 +128,11 @@ Inventory management is also limited. Parts tracking and materials management ar
 **The bottom line on Jobber:**
 It is the most practical starting point for a plumbing business under 10 technicians. The published pricing, the 14-day free trial with no credit card required, and the depth of independent contractor community resources make it the lowest-risk entry point in this category.
 
-**[Try Jobber free for 14 days →](https://getjobber.com/affiliates)**
+<div style="margin: 28px 0; text-align: center;">
+  <a href="https://getjobber.com/affiliates" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #2563eb; color: #ffffff; font-weight: 700; font-size: 16px; padding: 14px 28px; border-radius: 8px; text-decoration: none; box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.25);">
+    Try Jobber Free for 14 Days →
+  </a>
+</div>
 
 ---
 
@@ -164,7 +168,11 @@ The Android app performance gap is also relevant for plumbing teams whose techni
 **The bottom line on Housecall Pro:**
 The strongest choice for a plumbing business whose revenue model is built on maintenance agreements and residential service reputation. The customer communication tools, the membership billing automation, and the polished iOS experience are genuinely differentiated at the $149/month price point.
 
-**[Start with Housecall Pro — 14-day free trial →](https://housecallpro.partnerlinks.io/5qeb39utp5xi)**
+<div style="margin: 28px 0; text-align: center;">
+  <a href="https://housecallpro.partnerlinks.io/5qeb39utp5xi" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #059669; color: #ffffff; font-weight: 700; font-size: 16px; padding: 14px 28px; border-radius: 8px; text-decoration: none; box-shadow: 0 4px 6px -1px rgba(5, 150, 105, 0.25);">
+    Start Housecall Pro 14-Day Free Trial →
+  </a>
+</div>
 
 ---
 
@@ -197,6 +205,12 @@ The platform also scales less gracefully past 15 to 20 technicians, where its sm
 **The bottom line on FieldPulse:**
 The strongest recommendation for plumbing businesses in the 5 to 15 technician range that have hit the ceiling on Jobber or Housecall Pro and are not yet ready for the complexity and cost of ServiceTitan. The review base is the most credible in the category, and the funding suggests the platform is actively investing in feature development.
 
+<div style="margin: 28px 0; text-align: center;">
+  <a href="https://www.fieldpulse.com" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #0f172a; color: #ffffff; font-weight: 700; font-size: 16px; padding: 14px 28px; border-radius: 8px; text-decoration: none;">
+    Book a FieldPulse Demo →
+  </a>
+</div>
+
 ---
 
 ## 4. Workiz — Best for High Call Volume and Multi-Location Plumbing Operations
@@ -222,6 +236,12 @@ Workiz is also less suited to solo operators or very small residential plumbing 
 **The bottom line on Workiz:**
 The right choice for plumbing businesses that have outgrown mid-market platforms and specifically need call tracking, multi-location dispatch, or commercial account management. Not the right starting point for a 3-truck residential plumbing shop.
 
+<div style="margin: 28px 0; text-align: center;">
+  <a href="https://www.workiz.com" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #0f172a; color: #ffffff; font-weight: 700; font-size: 16px; padding: 14px 28px; border-radius: 8px; text-decoration: none;">
+    Explore Workiz Plans →
+  </a>
+</div>
+
 ---
 
 ## 5. ServiceTitan — For Established Plumbing Companies Ready to Scale
@@ -243,6 +263,12 @@ For a 5-tech plumbing shop, year-one all-in costs frequently exceed $40,000 befo
 **When ServiceTitan makes sense:**
 
 A plumbing business that has crossed $2M in annual revenue, has a full-time dispatcher and an office manager, and is planning to grow to 20 or more technicians should be having the ServiceTitan conversation. At that scale, the revenue optimization tools — specifically the flat-rate pricebook and marketing attribution — drive measurable per-ticket increases that offset the platform's cost. Below that threshold, the math generally does not work in the contractor's favor.
+
+<div style="margin: 28px 0; text-align: center;">
+  <a href="https://www.servicetitan.com" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #0f172a; color: #ffffff; font-weight: 700; font-size: 16px; padding: 14px 28px; border-radius: 8px; text-decoration: none;">
+    Request ServiceTitan Demo →
+  </a>
+</div>
 
 ---
 
