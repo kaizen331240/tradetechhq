@@ -6,7 +6,7 @@ author: "TradeTechHQ Editorial Team"
 category: "Plumbing Software"
 heroImage: "/images/best-plumbing-software-small-business-2026.jpg"
 vendorUrl: "https://housecallpro.partnerlinks.io/5qeb39utp5xi"
-secondaryVendorUrl: "https://getjobber.com/affiliates"
+secondaryVendorUrl: "https://www.getjobber.com/"
 badgeText: "2026 Buyer's Guide"
 score: 9.4
 summary: "Jobber leads for small residential plumbing teams that prioritize quoting and route optimization. Housecall Pro wins on marketing automation and mobile experience. FieldPulse is the strongest mid-market option for shops scaling past 5 techs."
